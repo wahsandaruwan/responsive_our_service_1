@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* Whole Doc */
+html{
+    font-family: 'Roboto';
+}
+
+body{
+    background-color: #222f3e;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(90deg, rgba(24,25,79,0.8519782913165266) 100%, rgba(95,89,191,0.30015756302521013) 100%, rgba(5,63,162,0.1881127450980392) 100%),url(./back.jpg);
+    background-size: cover;
+}
+
+/* Services */
+.container{
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    top: 170px;
+}
+
+/* Heading */
+.container > h1, .title{
+    font-family: 'Roboto';
+    font-weight: 300 !important;
+    letter-spacing: 1px;
+}
+
+/* Heading Desription */
+.container > h1, .container > p{
+    text-align: center;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    transition: color 2s ease-in;
+}
+
+/* One Service */
+.services{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.service{
+    margin: 12px;
+    overflow: hidden;
+    padding: 40px 25px;
+    position: relative;
+    text-align: center;
+    transition: 0.5s;
+    width: 200px;
+}
+
+.service:hover{
+    background-color: #d35400;
+    transform: translateY(-3px);
+}
+
+.service::after{
+    content: '';
+    border-width: 20px;
+    border-style: solid;
+    border-color: #18194f #d35400;
+    position: absolute;
+    left: -40px;
+    bottom: -40px;
+    transition: left 0.5s ease-out, bottom 0.5s ease-out;
+}
+
+.service:hover::after{
+    left: 0;
+    bottom: 0;
+}
+
+.service > i{
+    display: block;
+    color: #e6d6ec;
+    font-size: 4rem;
+    margin-bottom: 0.9rem;
+    transition: color 2s ease-in;
+}
+
+.service > .title{
+    font-weight: 900;
+    font-size: 1.2rem;
+    line-height: 1.55rem;
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+    transition: color 2s ease-in;
+}
+
+.service > .desc{
+    line-height: 1.55rem;
+    margin: 0;
+    transition: color 2s ease-out;
+}
+
+/* Responsive */
+@media(max-width:1110px){
+    .container > h1{
+        font-size: 30px;
+    }
+
+    .container > p, .service > .desc{
+        font-size: 15px;
+    }
+
+    .service > i{
+        font-size: 3rem;
+    }
+
+    .service{
+        width: 170px;
+        padding: 20px 15px;
+    }
+}
+
+@media(max-width:900px){
+    .service{
+        width: 250px;
+        padding: 40px 25px;
+    }
+}
